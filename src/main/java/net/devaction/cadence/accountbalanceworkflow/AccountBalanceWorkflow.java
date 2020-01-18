@@ -1,10 +1,14 @@
 package net.devaction.cadence.accountbalanceworkflow;
 
 import java.math.BigDecimal;
+import java.util.List;
 
 import com.uber.cadence.workflow.QueryMethod;
 import com.uber.cadence.workflow.SignalMethod;
 import com.uber.cadence.workflow.WorkflowMethod;
+
+import net.devaction.entity.AccountBalanceEntity;
+import net.devaction.entity.TransferEntity;
 
 /**
  * @author Víctor Gil
@@ -23,8 +27,14 @@ public interface AccountBalanceWorkflow {
     void closeAccount();
 
     @QueryMethod
-    BigDecimal getBalance();
+    BigDecimal getBalanceValue();
 
     @QueryMethod
-    Transfers getTransfers();
+    AccountBalanceEntity getBalance();
+
+    //@QueryMethod
+    //Transfers getTransfers();
+
+    @QueryMethod
+    List<TransferEntity> getTransfersList();
 }
