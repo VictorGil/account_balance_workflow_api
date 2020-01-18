@@ -32,9 +32,6 @@ public interface AccountBalanceWorkflow {
     @QueryMethod
     AccountBalanceEntity getBalance();
 
-    //@QueryMethod
-    //Transfers getTransfers();
-
     @QueryMethod
     List<TransferEntity> getTransfersList();
 }
