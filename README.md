@@ -1,4 +1,4 @@
-# Cadence Transfers Recording Service
+# Account Balance Workflow API  
   
 This repository contains the workflow API of an example/PoC of how to use **Uber Cadence** in order to implement event-driven microservices,
 together with Apache Kafka.  
