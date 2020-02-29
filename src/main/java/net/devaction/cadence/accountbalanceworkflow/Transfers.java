@@ -33,7 +33,11 @@ class Transfers {
         return list;
     }
 
-    String getLatestTransferId() {
+    String getLatestTransferId() throws NoTransfersYetException {
+        if (list.isEmpty()) {
+            throw new NoTransfersYetException();
+        }
+
         TransferEntity latestTransfer = list.get(list.size() - 1);
         return latestTransfer.getId();
     }
